@@ -1,0 +1,22 @@
+spring:
+  cloud:
+    nacos:
+      discovery:
+        server-addr: localhost:8848
+        service: nacos
+        heart-beat-interval: 5000
+        heart-beat-timeout: 15000
+        metadata:
+          mydata: abc
+        naming-load-cache-at-start: false
+        namespace: dev
+        group: myGroup
+        register-enabled: true
+        watch:
+          enabled: true
+        watch-delay: 30000
+  application:
+    name: nacos
+server:
+  port: 8888
+

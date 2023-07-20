@@ -1,0 +1,12 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: "server_user"
+          uri: "http://127.0.0.1:8888"
+          predicates:
+            - Path=/**
+  codec:
+    max-in-memory-size: 5MB # 修复拦截POST请求后内存超出缓冲区
+server:
+  port: 30000
